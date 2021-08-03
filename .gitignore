@@ -1,3 +1,4 @@
-/CSharp_AgeCalculator/bin/*
-/CSharp_AgeCalculator/obj/*
-/CSharp_AgeCalculator/.vs/*
+.vs
+**/bin
+**/obj
+.sonarqube
