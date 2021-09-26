@@ -38,11 +38,11 @@ namespace AgeCalculator
 
         private bool IsFromDateGreaterThanToDate(DateTime fromDate, DateTime toDate)
         {
-            return toDate.Year - fromDate.Year == 0 && (fromDate.Month > toDate.Month || fromDate.Month == toDate.Month && fromDate.Day >= toDate.Day);
+            return toDate.Year - fromDate.Year == 0 && fromDate.Month >= toDate.Month && fromDate.Day >= toDate.Day;
         }
         private void Calcualte(DateTime fromDate, DateTime toDate)
         {
-            if (toDate.Year - fromDate.Year <= 0 || IsFromDateGreaterThanToDate(fromDate, toDate))
+            if (toDate.Year - fromDate.Year < 0 || IsFromDateGreaterThanToDate(fromDate, toDate))
             {
                 throw new ArgumentException("The birthday must be earlier than the selected date.");
             }

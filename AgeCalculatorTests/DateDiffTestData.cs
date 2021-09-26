@@ -65,6 +65,36 @@ namespace AgeCalculatorTests
                     Days = 6,
                     Distances = (new DateTime(2015, 11, 15) - new DateTime(1985, 12, 9)).Days
                 }
+            },
+            new object[] {
+                new DateTime(2020, 10, 10),
+                new DateTime(2020, 11, 1),
+                new DateDiffResult {
+                    Years = 0,
+                    Months = 0,
+                    Days = 22,
+                    Distances = (new DateTime(2020, 11, 1) - new DateTime(2020, 10, 10)).Days
+                }
+            },
+            new object[] {
+                new DateTime(2020, 10, 1),
+                new DateTime(2020, 10, 10),
+                new DateDiffResult {
+                    Years = 0,
+                    Months = 0,
+                    Days = 9,
+                    Distances = (new DateTime(2020, 10, 10) - new DateTime(2020, 10, 1)).Days
+                }
+            },
+            new object[] {
+                new DateTime(1999, 10, 20),
+                new DateTime(2020, 10, 10),
+                new DateDiffResult {
+                    Years = 20,
+                    Months = 11,
+                    Days = 21,
+                    Distances = (new DateTime(2020, 10, 10) - new DateTime(1999, 10, 20)).Days
+                }
             }
         };
     }
